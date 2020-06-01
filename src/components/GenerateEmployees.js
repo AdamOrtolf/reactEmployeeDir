@@ -48,6 +48,16 @@ class GenerateEmployees extends Component {
             return( 
 
                   <>
+
+                  <div>
+                        <SearchFilter 
+                              handleInputChange={this.handleInputChange}
+                              search={this.state.search} />
+
+
+
+                  </div>
+                  
                   </>
             )
       }
