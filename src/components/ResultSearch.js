@@ -9,9 +9,10 @@ function ResultSearch(props) {
                               <th>     
                               </th>
                               <th onClick = {() => props.ARRAYFILTERNAMEHERE()}> Employee Name</th>
-                              <th onClick = {() => props.ARRAYFILTERNAMEHERE()}> Employee Name</th>
-                              <th onClick = {() => props.ARRAYFILTERNAMEHERE()}> Employee Name</th>
-                              <th onClick = {() => props.ARRAYFILTERNAMEHERE()}> Employee Name</th>
+                              {/* INPUT ARRAYFILTER FUNCTION ABOVE WHEN COMPLETED IN GENERATEEMPLOYEES FILE*/}
+                              <th> Email</th>
+                              <th> Phone Number </th>
+                              <th> Date of Birth </th>
 
                         </tr>
 
