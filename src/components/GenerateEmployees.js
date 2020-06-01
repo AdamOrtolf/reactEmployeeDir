@@ -13,6 +13,7 @@ class GenerateEmployees extends Component {
 
             }
       handleInputChange = event => {
+            console.log("input change occured" + event)
             const search = event.target.name;
             const value = event.target.value;
             this.setState({
@@ -24,6 +25,21 @@ class GenerateEmployees extends Component {
             API.search().then(res => this.setState({ results: res.data.results})).catch(error => console.log(error));
             
       }
+
+      componentDidMount() { 
+            this.apiCall();}
+      // ask brian if I need anything inside parenthesis of this.apiCall(HERE)//
+
+
+      searchArray = () => {
+            const matchingName = [...this.state.results].sort((b, a) => b.name.first > a.name.first ? 1 : -1)
+
+            this.setState({...this.state, results: matchingName})
+
+
+      }
+      
+
 
 
       // ill need an API call function plus a componentDidMount, a handleinputchange and a function to render array of names based upon this.state.search 
