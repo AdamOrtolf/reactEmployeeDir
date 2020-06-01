@@ -31,3 +31,5 @@ class GenerateEmployees extends Component {
             )
       }
 }
+
+export default GenerateEmployees;
