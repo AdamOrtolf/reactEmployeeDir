@@ -21,14 +21,16 @@ class GenerateEmployees extends Component {
             });
       };
 
+      componentDidMount() { 
+            this.apiCall();}
+      // ask brian if I need anything inside parenthesis of this.apiCall(HERE)//
+
       apiCall = () => {
             API.search().then(res => this.setState({ results: res.data.results})).catch(error => console.log(error));
             
       }
 
-      componentDidMount() { 
-            this.apiCall();}
-      // ask brian if I need anything inside parenthesis of this.apiCall(HERE)//
+      
 
 
       searchArray = () => {
