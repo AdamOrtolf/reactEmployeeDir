@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import API from "../utils/Api";
+import API from "../utils/API";
 import SearchFilter from "./SearchFilter";
 import ResultSearch from "./ResultSearch";
 
@@ -19,6 +19,11 @@ class GenerateEmployees extends Component {
             [search]: value
             });
       };
+
+      apiCall = () => {
+            API.search().then(res => this.setState({ results: res.data.results})).catch(error => console.log(error));
+            
+      }
 
 
       // ill need an API call function plus a componentDidMount, a handleinputchange and a function to render array of names based upon this.state.search 
