@@ -54,9 +54,17 @@ class GenerateEmployees extends Component {
                               handleInputChange={this.handleInputChange}
                               search={this.state.search} />
 
+                        <br></br>
+                        <br></br>
+
+                        <ResultSearch results={this.state.results} matchingName={this.matchingName} search={this.state.search} order={this.state.order} />
 
 
                   </div>
+
+                  <footer>
+                        <strong>IF NO EMPLOYEES SHOW FROM YOUR SEARCH THEN EMPLOYEE WAS NOT FOUND IN DATABASE.</strong>
+                  </footer>
                   
                   </>
             )
